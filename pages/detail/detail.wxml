@@ -1,0 +1,33 @@
+<view class="container">
+  <scroll-view scroll-y style="height: {{wheight}}px;" scroll-into-view="{{toview}}" scroll-top="{{scrollTop}}">
+    <view class="detail">
+      <view class="title">{{res.title}}</view>
+      <view class="meta">
+        <view class="time"><text>{{res.time}}</text></view>
+        <view class="nums" wx:if="{{res.time}}" bindtap="toComment"><text>{{res.content_num}}跟帖</text></view>
+      </view>
+      <view class="topic">{{res.topic}}</view>
+      <view class="content">
+        <view class="plist" wx:for="{{res.contents}}" wx:for-item="item" wx:key="*this">
+          <image wx:if="{{item.img !== undefined}}" src="{{item.img}}" mode="widthFix"></image>
+          <text wx:else>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="share" wx:if="{{res.time}}">
+      <button class="sharebtn" open-type="share">分享给朋友~</button>
+      <button class="totop" bindtap="totop">↑返回顶部</button>
+    </view>
+    <view class="comments" id="comment" wx:if="{{res.time}}">
+      <view class="ctitle">- 最新评论 -</view>
+      <view class="clist" wx:if="{{time.length !== 0}}">
+        <view class="citem" wx:for="{{comments}}" wx:for-item="item" wx:for-index="idx" wx:key="*this">
+          <view class="name">{{item.name}}</view>
+          <view class="host_name">{{item.host_name}} {{time[idx]}}</view>
+          <view class="info">{{item.comment}}</view>
+        </view>
+      </view>
+      <view class="nocomment" wx:else>还没人评论哦~</view>
+    </view>
+  </scroll-view>
+</view>

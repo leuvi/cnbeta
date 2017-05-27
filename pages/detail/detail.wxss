@@ -1,0 +1,94 @@
+.detail {
+  background: #fff;
+  padding: 40rpx 30rpx;
+}
+.title {
+  font-size: 44rpx;
+  font-weight: 600;
+}
+.meta {
+  display: flex;
+  margin-top: 40rpx;
+  font-size: 26rpx;
+}
+.time {
+  flex-grow: 1;
+  color: #999;
+}
+.nums {
+  flex-grow: 1;
+  text-align: right;
+}
+.nums text {
+  padding: 4rpx 10rpx;
+  background: #ea0000;
+  color: #fff;
+}
+.topic {
+  margin-top: 60rpx;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  text-indent: 2em;
+  text-align: justify;
+}
+.plist {
+  margin-top: 40rpx;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  text-align: justify;
+}
+.content image {
+  width: 100%;
+}
+.share {
+  margin-top: 20rpx;
+  text-align: center;
+  padding: 0 120rpx;
+}
+.share button {
+  font-size: 30rpx;
+}
+.share .sharebtn {
+  color: #fff;
+  background: #ea0000; 
+}
+.share .totop {
+  color: #999;
+  margin-top: 30rpx;
+}
+.comments {
+  margin-top: 60rpx;
+  background-color: #fff;
+  padding: 30rpx 0 40rpx;
+  border-top: 20rpx solid #ededed;
+}
+.ctitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.citem {
+  margin-top: 30rpx;
+  border-bottom: 1px solid #ededed;
+  padding: 0 30rpx 20rpx;
+}
+.citem .name {
+  font-size: 26rpx;
+  color: #447EB9;
+}
+.citem .host_name {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+  margin-bottom: 16rpx; 
+}
+.citem .info {
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.nocomment {
+  text-align: center;
+  color: #999;
+  margin: 40rpx 0 20rpx;
+  font-size: 24rpx;
+}

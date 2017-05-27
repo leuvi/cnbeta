@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#ea0000",
+    "navigationBarTitleText": "cnBeta+",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  }
+}
