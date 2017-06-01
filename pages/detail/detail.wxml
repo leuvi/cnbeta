@@ -20,11 +20,23 @@
     </view>
     <view class="comments" id="comment" wx:if="{{res.time}}">
       <view class="ctitle">- 最新评论 -</view>
-      <view class="clist" wx:if="{{time.length !== 0}}">
+      <view class="clist" wx:if="{{comments}}">
         <view class="citem" wx:for="{{comments}}" wx:for-item="item" wx:for-index="idx" wx:key="*this">
-          <view class="name">{{item.name}}</view>
-          <view class="host_name">{{item.host_name}} {{time[idx]}}</view>
-          <view class="info">{{item.comment}}</view>
+          <block wx:if="{{item.length == 1}}">
+            <view class="name">{{item[0].name}}</view>
+            <view class="host_name">{{item[0].host_name}} {{item[0].date}}</view>
+            <view class="info">{{item[0].comment}}</view>
+          </block>
+          <view class="reply_box" wx:else>
+            <view class="reply" wx:for="{{item}}" wx:for-item="item_reply" wx:for-index="idx_reply" wx:key="*this">
+              <view class="name">
+                <text>{{item_reply.name}}</text>
+                <text class="floor">{{idx_reply + 1}}</text>
+              </view>
+              <view class="host_name">{{item_reply.host_name}} <text>{{item_reply.date}}</text></view>
+              <view class="info">{{item_reply.comment}}</view>
+            </view>
+          </view>
         </view>
       </view>
       <view class="nocomment" wx:else>还没人评论哦~</view>

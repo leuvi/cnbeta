@@ -27,12 +27,13 @@ swiper {
 }
 .content {
   background: #fff;
+  padding-left: 20rpx;
 }
 .items {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1rpx solid #ededed;
   display: flex;
   flex-direction: row;
-  padding: 20rpx;
+  padding: 30rpx 20rpx 30rpx 0;
   height: 160rpx;
   overflow: hidden;
 }

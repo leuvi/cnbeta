@@ -37,6 +37,9 @@
   line-height: 60rpx;
   text-align: justify;
 }
+.content text {
+  word-break: break-all;
+}
 .content image {
   width: 100%;
 }
@@ -69,8 +72,8 @@
 }
 .citem {
   margin-top: 30rpx;
-  border-bottom: 1px solid #ededed;
-  padding: 0 30rpx 20rpx;
+  border-top: 1rpx solid #ddd;
+  padding: 30rpx 30rpx 0;
 }
 .citem .name {
   font-size: 26rpx;
@@ -79,11 +82,11 @@
 .citem .host_name {
   font-size: 24rpx;
   color: #999;
-  margin-top: 12rpx;
+  margin-top: 6rpx;
   margin-bottom: 16rpx; 
 }
 .citem .info {
-  font-size: 30rpx;
+  font-size: 32rpx;
   line-height: 50rpx;
 }
 .nocomment {
@@ -91,4 +94,35 @@
   color: #999;
   margin: 40rpx 0 20rpx;
   font-size: 24rpx;
+}
+.reply {
+  background: #fffbee;
+  border: 1rpx solid #ddd;
+  padding: 20rpx 20rpx 10rpx;
+  margin-top: -1px;
+}
+.reply .name {
+  display: flex;
+}
+.reply .name text {
+  flex-grow: 1;
+}
+.reply .name .floor {
+  text-align: right;
+  color: #999;
+}
+.reply_box .reply:last-child {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 20rpx;
+}
+.reply_box .reply:last-child .floor {
+  display: none;
+}
+.reply_box .reply .host_name text {
+  display: none;
+}
+.reply_box .reply:last-child .host_name text {
+  display: inline-block;
 }

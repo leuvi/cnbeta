@@ -14,7 +14,7 @@ Page({
   },
   loadData(page, fn, BOOL) {
     var self = this
-    wx.showLoading({ title: '正在加载数据' })
+    wx.showLoading({ title: '正在玩命加载..' })
     wx.request({
       url: 'https://api.sweetui.com/cnbeta/more?page=' + page,
       header: {
@@ -38,7 +38,7 @@ Page({
           title: '数据加载失败',
           content: '请检查您的网络',
           showCancel: false,
-          confirmText: '点我刷新',
+          confirmText: '刷新',
           success: function (res) {
             if (res.confirm) {
               self.loadData(self.data.page)
